@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample FunPage</title>
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="recommentdationController">
+
+      <div class="header">MyList</div>
+      <div class="container">
+          <div ng-repeat="list in myList track by $index" class="recommendation" ng-mouseenter="list.options=true" ng-mouseleave="list.options=false">
+            <img ng-src="{{list.img}}">
+            <span ng-if="list.options" class="action remove" ng-click="remove($index)">Remove</span>
+            <span class="title">{{list.title}}</span>
+          </div>
+      </div>
+      
+      <div class="header">Recommendations</div>
+      <div class="container">
+          <div ng-repeat="recommendation in recommendations track by $index"  class="recommendation" ng-mouseenter="recommendation.options=true" ng-mouseleave="recommendation.options=false">
+            <img ng-src="{{recommendation.img}}">
+            <span ng-if="recommendation.options" class="action add" ng-click="add(recommendation)">Add</span>
+            <span class="title">{{recommendation.title}}</span>
+          </div>
+      </div>
+
+  </div>
+  <script src="lib/angular.min.js"></script>  
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+</body>
+</html>

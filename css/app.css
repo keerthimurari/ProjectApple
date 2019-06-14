@@ -1,0 +1,57 @@
+
+body{
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    overflow-x: scroll;
+    border: 1px solid lightgray;
+    height: 270px;
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.container .recommendation{
+    float: left;
+    margin: 5px 10px;
+    position: relative;
+}
+.container .recommendation img{
+    display: block;
+}
+.container .recommendation .action.add{
+    width: 50px;
+}
+.container .recommendation .action.remove{
+    width: 70px;
+}
+.container .recommendation .action{
+    background: #2196F3;
+    color: white;
+    margin: auto;
+    left: 0;
+    right: 0;
+    line-height: 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.container .recommendation .title{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.header{
+    margin: 10px; 
+}
